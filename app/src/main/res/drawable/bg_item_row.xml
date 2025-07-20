@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@android:color/darker_gray"> <!-- Customize the ripple color -->
+
+    <!-- Your original background shape -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/rowItemBackgroundColor" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/rowItemStrokeColor" />
+            <corners android:radius="@dimen/_8sdp" />
+        </shape>
+    </item>
+
+</ripple>

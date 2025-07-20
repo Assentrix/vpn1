@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryBlue"
+    tools:context=".ui.auth.fragment.AccountNumberCreatedFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/mobile_vpn"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_settings"
+        android:layout_width="@dimen/_47sdp"
+        android:layout_height="@dimen/_47sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:background="@drawable/btn_round_bg"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_account"
+        android:layout_width="@dimen/_47sdp"
+        android:layout_height="@dimen/_47sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:background="@drawable/btn_round_bg"
+        android:src="@drawable/ic_account"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintEnd_toStartOf="@id/btn_settings"
+        app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+    <View
+        android:id="@+id/device_name_view_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/dividerGray"
+        app:layout_constraintEnd_toEndOf="@id/btn_settings"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/btn_settings" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_congrats_msg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/congrats"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintEnd_toEndOf="@id/device_name_view_divider"
+        app:layout_constraintStart_toStartOf="@id/device_name_view_divider"
+        app:layout_constraintTop_toBottomOf="@id/device_name_view_divider" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_your_account_number_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/here_s_your_account_number_save_it"
+        android:textColor="@color/textOffWhite"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="@id/tv_congrats_msg"
+        app:layout_constraintStart_toStartOf="@id/tv_congrats_msg"
+        app:layout_constraintTop_toBottomOf="@id/tv_congrats_msg" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/et_account_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/_1115_0834_7105_8536"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintEnd_toEndOf="@id/tv_your_account_number_desc"
+        app:layout_constraintStart_toStartOf="@id/tv_congrats_msg"
+        app:layout_constraintTop_toBottomOf="@id/tv_your_account_number_desc" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/device_name"
+        android:textColor="@color/textOffWhite"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintStart_toStartOf="@id/et_account_number"
+        app:layout_constraintTop_toBottomOf="@id/et_account_number" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/ic_info"
+        app:layout_constraintBottom_toBottomOf="@id/tv_device_name"
+        app:layout_constraintStart_toEndOf="@id/tv_device_name"
+        app:layout_constraintTop_toTopOf="@id/tv_device_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_guide_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/text_guide_to_app_usage"
+        android:textColor="@color/textOffWhite"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="@id/et_account_number"
+        app:layout_constraintStart_toStartOf="@id/et_account_number"
+        app:layout_constraintTop_toBottomOf="@id/tv_device_name" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_buy_credit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:backgroundTint="@color/successGreen"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_12sdp"
+        android:text="@string/add_30_days_time_us_4_99"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/device_name_view_divider"
+        app:layout_constraintStart_toStartOf="@id/device_name_view_divider" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="326dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

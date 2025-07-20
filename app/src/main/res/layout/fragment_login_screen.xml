@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryBlue">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_app_logo"
+        android:layout_width="@dimen/_47sdp"
+        android:layout_height="@dimen/_47sdp"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:background="@drawable/btn_round_bg"
+        android:src="@drawable/ic_logo"
+        app:layout_constraintEnd_toStartOf="@id/app_name"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/txt_mobile_vpn"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_app_logo"
+        app:layout_constraintEnd_toStartOf="@id/btn_setting"
+        app:layout_constraintStart_toEndOf="@id/btn_app_logo"
+        app:layout_constraintTop_toTopOf="@id/btn_app_logo" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_setting"
+        android:layout_width="@dimen/_47sdp"
+        android:layout_height="@dimen/_47sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:background="@drawable/btn_round_bg"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintBottom_toBottomOf="@id/btn_app_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/app_name"
+        app:layout_constraintTop_toTopOf="@id/btn_app_logo" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_static_map"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_static_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_app_logo" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_flag1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/img_flag3"
+        app:layout_constraintEnd_toEndOf="@id/app_name"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/txt_login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_flag1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_enter_account_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/txt_enter_your_account_number"
+        android:textColor="@color/textLightGray"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_login" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/textFieldBackground"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:background="@drawable/text_field_white_round_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_enter_account_num">
+
+        <EditText
+            android:id="@+id/edit_text_account_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:hint="@string/txt_field_hint"
+            android:inputType="number"
+            android:maxLength="19"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:textColor="@color/textFieldGray"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_text_field_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill" />
+
+        <ImageButton
+            android:id="@+id/btn_text_field_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@drawable/bg_transparent_ripple"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_round_arrow_text_field"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_flag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:src="@drawable/img_flag2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textFieldBackground" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_flag3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_flag1"
+        app:layout_constraintBottom_toBottomOf="@id/img_flag2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toEndOf="@id/img_flag2"
+        app:layout_constraintTop_toTopOf="@id/img_flag2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_dont_have_acoount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/txt_dont_t_have_an_account_number"
+        android:textColor="@color/textLightGray"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_create_account_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_create_account_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_18sdp"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:backgroundTint="@color/createAccountGray"
+        android:paddingVertical="@dimen/_12sdp"
+        android:text="@string/txt_create_account"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primaryBlue">#FF141A3D</color>
+    <color name="smallRoundBtnBg">#1E2651</color>
+    <color name="successGreen">#FF17BA6E</color>
+    <color name="dangerRed">#FFE34038</color>
+    <color name="dangerRedOff">#24E34038</color>
+    <color name="warningRedBorder">#737B3D3D</color>
+    <color name="neutralGray">#FF4D5790</color>
+    <color name="textLightGray">#FF8087A9</color>
+    <color name="textFieldGray">#FFB8B5C6</color>
+    <color name="createAccountGray">#FF1F264E</color>
+    <color name="greenDisabled">#FF0C7C48</color>
+    <color name="disabledText">#FF8AB09A</color>
+    <color name="tooManyDeviceCellBg">#FF2C3463</color>
+    <color name="dividerGray">#FF485184</color>
+    <color name="textOffWhite">#FF959CBE</color>
+    <color name="textSubHeading">#FF666F9F</color>
+    <color name="txtBtnServerNode">#FFA5ACD6</color>
+    <color name="locationFullCellBgExpanded">#394379</color>
+    <color name="locationCellBgNormal">#FF252D59</color>
+    <color name="locationCellStroke">#2F3D63</color>
+    <color name="dividerColor">#CC485184</color>
+    <color name="rowItemBackgroundColor">#FF2F386A</color>
+    <color name="rowItemStrokeColor">#33838FD1</color>
+    <color name="expandedLocationBg">#33374176</color>
+    <color name="expandedCountryCellBg">#CF505DA3</color>
+    <color name="selectedCountryCellBg">#6A76B8</color>
+</resources>

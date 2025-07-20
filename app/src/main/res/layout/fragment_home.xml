@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryBlue">
+
+    <FrameLayout
+        android:id="@+id/map_frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/frg_map_container"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/map_top_layer_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/primaryBlue" />
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/mobile_vpn"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_settings"
+        android:layout_width="@dimen/_47sdp"
+        android:layout_height="@dimen/_47sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:background="@drawable/btn_round_bg"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_account"
+        android:layout_width="@dimen/_47sdp"
+        android:layout_height="@dimen/_47sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:background="@drawable/btn_round_bg"
+        android:src="@drawable/ic_account"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintEnd_toStartOf="@id/btn_settings"
+        app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/dividerGray"
+        app:layout_constraintEnd_toEndOf="@id/btn_settings"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/btn_settings" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/view_divider2"
+        app:layout_constraintEnd_toStartOf="@id/txt_time_left"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@id/view_divider"
+        app:layout_constraintTop_toBottomOf="@+id/view_divider"
+        tools:text="Device Name: Secure Coyote" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_time_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/txt_device_name"
+        app:layout_constraintEnd_toEndOf="@id/view_divider"
+        app:layout_constraintStart_toEndOf="@id/txt_device_name"
+        app:layout_constraintTop_toTopOf="@id/txt_device_name"
+        tools:text="Time left: 172 days" />
+
+    <View
+        android:id="@+id/view_divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/dividerGray"
+        app:layout_constraintEnd_toEndOf="@id/view_divider"
+        app:layout_constraintStart_toStartOf="@id/view_divider"
+        app:layout_constraintTop_toBottomOf="@id/txt_device_name" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_new_device_created"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_11sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/bg_dialog"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:paddingVertical="@dimen/_9sdp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_divider2">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/txt_new_device_created"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_device_created_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Welcome, this device is now called Deep Coyote. For more details see the info button in Account."
+            android:textColor="@color/textLightGray"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+        <View
+            android:id="@+id/vertical_divider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:background="@color/dividerGray"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_device_created_desc"
+            app:layout_constraintEnd_toStartOf="@id/btn_close_new_device_created"
+            app:layout_constraintStart_toEndOf="@+id/txt_device_created_desc"
+            app:layout_constraintTop_toTopOf="@+id/title_text" />
+
+        <ImageView
+            android:id="@+id/btn_close_new_device_created"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="@string/desc_close"
+            android:focusable="true"
+            android:src="@drawable/img_close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/vertical_divider"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_connectionStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:includeFontPadding="false"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:text="@string/txt_not_connected"
+        android:textColor="@color/dangerRed"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintBottom_toTopOf="@id/view_divider_not_connected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginBottom="0dp" />
+
+    <View
+        android:id="@+id/view_divider_not_connected"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:background="@color/dividerGray"
+        app:layout_constraintBottom_toTopOf="@id/txt_connected_country"
+        app:layout_constraintEnd_toEndOf="@id/txt_connectionStatus"
+        app:layout_constraintStart_toStartOf="@id/txt_connectionStatus"
+        app:layout_goneMarginBottom="@dimen/_90sdp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_connected_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:includeFontPadding="false"
+        android:text="Canada, Toronto"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_24sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btn_server_node"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_server_node"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/ic_arrow_up"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:includeFontPadding="false"
+        android:text="Th-bkk-wg-002  "
+        android:textAllCaps="false"
+        android:textColor="@color/txtBtnServerNode"
+        app:layout_constraintBottom_toTopOf="@id/txt_in_ip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_in_ip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/txt_out_ip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_out_ip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/view_divider3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view_divider3"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@color/dividerGray"
+        app:layout_constraintBottom_toTopOf="@id/btn_select_location"
+        app:layout_constraintEnd_toEndOf="@id/txt_connectionStatus"
+        app:layout_constraintStart_toStartOf="@id/txt_connectionStatus" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/connection_status_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="txt_connected_country,btn_server_node,txt_in_ip,txt_out_ip,view_divider3" />
+
+    <LinearLayout
+        android:id="@+id/btn_select_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/round_dark_blue_btn_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_14sdp"
+        app:layout_constraintBottom_toTopOf="@id/btn_secure_connection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_select_location"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:src="@drawable/ic_right_arrow" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_secure_connection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_24sdp"
+        android:backgroundTint="@color/successGreen"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_12sdp"
+        android:text="@string/txt_secure_connection"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:cornerRadius="@dimen/_30sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/btn_select_location"
+        app:layout_constraintStart_toStartOf="@id/btn_select_location" />
+</androidx.constraintlayout.widget.ConstraintLayout>
